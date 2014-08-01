@@ -5,6 +5,7 @@ import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,7 +18,8 @@ import javax.swing.border.TitledBorder;
  * @author Samuel T. C. Santos
  * @version 1.0
  */
-public class AlunoFrame extends JFrame {
+@SuppressWarnings("serial")
+public class AlunoFrame extends JDialog {
 	
 	//Creating Text Fields
 	private JTextField tfNome;
@@ -47,9 +49,8 @@ public class AlunoFrame extends JFrame {
 	private JButton btCancela;
 	
 	public AlunoFrame(){
-		super("Novo Aluno");
 		initComponents();
-		
+		setTitle("Novo Aluno");
 		panel.setBorder(title);
 		panel.setLayout(layout);
 		
@@ -68,7 +69,7 @@ public class AlunoFrame extends JFrame {
 		
 		panel.setBackground(Color.white);
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(300,250);
 		setResizable(false);
 		

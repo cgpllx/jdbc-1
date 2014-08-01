@@ -1,5 +1,8 @@
 package com.stcds.jdbc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.stcds.dao.AlunoDAO;
 import com.stcds.models.Aluno;
 
@@ -13,6 +16,26 @@ import com.stcds.models.Aluno;
 public class AlunoDAOTest {
 
 	public static void main(String[] args) {
+		lista();
+	}
+	
+	private static void lista(){
+		//Creating a new Object Aluno
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		//Creating a new Object AlunoDAO
+		AlunoDAO dao = new AlunoDAO();
+		
+		alunos = dao.getAll();
+		
+		for (Aluno aluno: alunos){
+			System.out.print(aluno.getCpf());
+			System.out.print(" " + aluno.getIdade());
+			System.out.println(" " + aluno.getNome());
+		}
+	}
+	
+	private static void adiciona(){
 		//Creating a new Object Aluno
 		Aluno aluno = new Aluno();
 		

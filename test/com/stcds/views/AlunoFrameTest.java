@@ -1,6 +1,5 @@
 package com.stcds.views;
 
-import javax.swing.JFrame;
 
 /**
  * Testing the Frame Aluno.
